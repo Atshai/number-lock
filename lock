@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        scanner.close();
+        int sumOfDigits = 0;
+        int numberLock = 0;
+        while (N > 0) {
+            sumOfDigits += N % 10;
+            N /= 10;
+        }
+        numberLock = sumOfDigits * 10 + 9;
+
+        System.out.println(numberLock);
+    }
+}
